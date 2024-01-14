@@ -1,0 +1,28 @@
+{
+  "name": "@boringtutor/delay",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "node src/index.ts",
+    "build": "tsup src/index.ts --format cjs, esm --dts ",
+    "release": "npm run build && changeset publish",
+    "start": "tsc && node src/index.ts",
+    "lint": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@changesets/cli": "^2.26.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
